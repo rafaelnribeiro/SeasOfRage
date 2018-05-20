@@ -1,0 +1,888 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <event-block sid="784310871723468">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="760264703798510" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="977424836021675" type="PlayerSprites">
+                    <param id="0" name="Instance variable">character</param>
+                    <param id="1" name="Value">Character</param>
+                </action>
+                <action id="4" name="Set animation" sid="494808039109675" type="PlayerSprites">
+                    <param id="0" name="Animation">&quot;Idle&quot; &amp; PlayerSprites.character</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Call function" sid="266032788035286" type="Function">
+                    <param id="0" name="Name">&quot;RefreshHUD&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="779052776420642" type="LimitLeft">
+                    <param id="0" name="Pin to">Camera</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="982810249186647" type="LimitRight">
+                    <param id="0" name="Pin to">Camera</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="562885030251477">
+            <conditions>
+                <condition id="0" name="On function" sid="569989989986855" type="Function">
+                    <param id="0" name="Name">&quot;RefreshHUD&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="714412298676232" type="PlayerLife">
+                    <param id="0" name="Width">Player.life * 8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="732462809628254">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="875777560515096" type="Player">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">LimitLeft.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="506673744684853" type="Player">
+                    <param id="0" name="X">LimitLeft.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="868172215270226">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="988749528118828" type="Player">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">LimitRight.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="698919524735588" type="Player">
+                    <param id="0" name="X">LimitRight.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Player Events - Inicio</comment>
+        <event-block sid="910622041855908">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="754445922297292" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="678070367462526" type="PlayerSprites">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y + PlayerJump.Y</param>
+                </action>
+                <action id="0" name="Sort all Objects in layer by Y" sid="179674666463755" type="ZSorter">
+                    <param id="0" name="Layer">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="161373553979275">
+            <conditions>
+                <condition id="-8" inverted="1" name="Compare two values" sid="248264012472737" type="System">
+                    <param id="0" name="First value">left(PlayerSprites.AnimationName,6)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="445361061152439" type="Player">
+                    <param id="0" name="Instance variable">dead</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="678324833546283">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="944348447835189" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="699362880425695" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="543912851238711">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="809964135257305" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="244849959263694" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="658488916897498">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="643691423446989" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="452751559027534" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="871948055278642" type="PlayerSprites">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="490325872953568">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="677464509850391" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="566851672139339" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="753458681160391" type="PlayerSprites">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="517525404001306">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="274411176082506" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="648668154326002" type="PlayerJump">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="188113504924379" type="PlayerSprites">
+                            <param id="0" name="Animation">&quot;Jump&quot; &amp; PlayerSprites.character</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="676618707200134">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="695412237601705" type="Keyboard">
+                            <param id="0" name="Key">82</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="732380777062767" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="166176658447299">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="600645101029609" type="PlayerSprites" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="384559315301679" type="Player">
+                                    <param id="0" name="Object">PlayerAttack</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="807727234925689">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="839144771081537" type="PlayerSprites" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="735099659434152" type="Player">
+                                    <param id="0" name="Object">PlayerAttack</param>
+                                    <param id="1" name="Layer">1</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="907279696060283">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="363320088309345" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="544554528326390" type="PlayerSprites">
+                            <param id="0" name="Animation">&quot;AttackA&quot; &amp; PlayerSprites.character</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="225912778882259">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="886581812803813" type="Keyboard">
+                            <param id="0" name="Key">82</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="425920892508965" type="PlayerSprites">
+                            <param id="0" name="Animation">&quot;AttackB&quot; &amp; PlayerSprites.character</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="987727430806644">
+            <conditions>
+                <condition id="5" name="On any finished" sid="540923152982223" type="PlayerSprites" />
+                <condition id="-8" name="Compare two values" sid="401527401225701" type="System">
+                    <param id="0" name="First value">left(PlayerSprites.AnimationName,6)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="264136650256155" type="PlayerSprites">
+                    <param id="0" name="Animation">&quot;Idle&quot; &amp; PlayerSprites.character</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="213350549061222">
+            <conditions>
+                <condition behavior="8Direction" id="0" name="Is moving" sid="973568254223109" type="Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="529613240779825" type="PlayerJump" />
+                <condition id="-8" inverted="1" name="Compare two values" sid="740020362676805" type="System">
+                    <param id="0" name="First value">left(PlayerSprites.AnimationName,6)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="206268728783251" type="PlayerSprites">
+                    <param id="0" name="Animation">&quot;Walk&quot; &amp; PlayerSprites.character</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="722513987002189">
+            <conditions>
+                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="338263919476997" type="Player" />
+                <condition behavior="Platform" id="2" name="Is on floor" sid="292785471300847" type="PlayerJump" />
+                <condition id="-8" inverted="1" name="Compare two values" sid="425471081966081" type="System">
+                    <param id="0" name="First value">left(PlayerSprites.AnimationName,6)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;Attack&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="918603158524240" type="PlayerSprites">
+                    <param id="0" name="Animation">&quot;Idle&quot; &amp; PlayerSprites.character</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="105655762545347">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="918988460900476" type="Player">
+                    <param id="0" name="Object">EnemyAttack</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="733387656539374" type="Player">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="530091346092387" type="Player">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="762657398946108" type="EnemyAttack" />
+                <action id="0" name="Call function" sid="102059130062065" type="Function">
+                    <param id="0" name="Name">&quot;RefreshHUD&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="204890326000683">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="337586313532457" type="Player">
+                    <param id="0" name="Instance variable">life</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="328590829912685" type="Player">
+                    <param id="0" name="Instance variable">dead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="113614658339351" type="PlayerSprites">
+                    <param id="0" name="Animation">&quot;Dead&quot; &amp; PlayerSprites.character</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="158145837491020" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="153975945671888" type="System" />
+            </actions>
+        </event-block>
+        <comment>Player Events - Fim</comment>
+        <comment></comment>
+        <comment>Enemy Events - Inicio</comment>
+        <comment>Faz o inimigo ficar sempre de frente para o player</comment>
+        <event-block sid="982584390542002">
+            <conditions>
+                <condition id="-11" name="For Each" sid="200463756253086" type="System">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="426901596914361" type="System">
+                    <param id="0" name="Object">EnemySprites</param>
+                    <param id="1" name="Expression">EnemySprites.enemyID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Enemy.enemyID</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="522122157473551" type="Enemy">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="918628466355732" type="EnemySprites">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="446094892314235" type="Enemy">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="108294982807935">
+            <conditions>
+                <condition id="-11" name="For Each" sid="499313553736040" type="System">
+                    <param id="0" name="Object">Enemy</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="420112084650719" type="System">
+                    <param id="0" name="Object">EnemySprites</param>
+                    <param id="1" name="Expression">EnemySprites.enemyID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Enemy.enemyID</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="690610201363415" type="Enemy">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="672555971937669" type="EnemySprites">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="283442811373000" type="Enemy">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>O inimigo esta ativo apenas se estiver na tela</comment>
+        <event-block sid="992440626655391">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="972725327156423" type="Enemy" />
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="570164649670145" type="Enemy">
+                    <param id="0" name="Instance variable">active</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="161316286883009" type="Enemy">
+                    <param id="0" name="Instance variable">active</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="761383708735925">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="985716051857785" type="Enemy">
+                    <param id="0" name="Instance variable">active</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Posiciona o sprite do inimigo junto com o inimigo de mesmo enemyID</comment>
+                <event-block sid="515568489927535">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="655824284055426" type="System" />
+                        <condition id="-11" name="For Each" sid="710557011414414" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="403247802212972" type="System">
+                            <param id="0" name="Object">EnemySprites</param>
+                            <param id="1" name="Expression">EnemySprites.enemyID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">Enemy.enemyID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="509001339638443" type="EnemySprites">
+                            <param id="0" name="X">Enemy.X</param>
+                            <param id="1" name="Y">Enemy.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Sempre que o inimigo possuir um caminho a seguir, mova por esse caminho</comment>
+                <event-block sid="350898878025161">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="158935005759507" type="Enemy" />
+                        <condition id="-11" name="For Each" sid="180938966614884" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="656432558632331" type="Enemy">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pathfinding" id="1" name="Move along path" sid="567326543643769" type="Enemy" />
+                    </actions>
+                </event-block>
+                <comment>A cada segundo, se o inimigo estiver longe do player, se aproxime do player</comment>
+                <event-block sid="897747881262143">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="503505656528549" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="137565693415850" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition behavior="LineOfSight1" id="0" inverted="1" name="Has LOS to object" sid="203449034638501" type="Enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="191440077356840">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="192424970320190" type="Enemy">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="572798813296918" type="Enemy">
+                                    <param id="0" name="X">round(Player.X) + 40</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="509056941614210">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="511051855493703" type="Enemy">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="596016561720027" type="Enemy">
+                                    <param id="0" name="X">round(Player.X) - 40</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Se o inimigo está perto, mas não o suficiente para atacar, se aproxime até a distância de ataque</comment>
+                <event-block sid="292151113780658">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="607416202124331" type="System">
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="146348833320365" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition behavior="LineOfSight1" id="0" name="Has LOS to object" sid="954342303470421" type="Enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="261443985177476" type="Enemy">
+                            <param id="0" name="Instance variable">close</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="657765564821402">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="999377437104909" type="Enemy">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="254408197062055" type="Enemy">
+                                    <param id="0" name="X">Player.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="461577260975145">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="394603241692876" type="Enemy">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="278479349092432" type="Enemy">
+                                    <param id="0" name="X">Player.ImagePointX(2)</param>
+                                    <param id="1" name="Y">Player.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Se o inimigo esta na distância de ataque</comment>
+                <event-block sid="597483343780020">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="914648628339247" type="System">
+                            <param id="0" name="Interval (seconds)">0.5</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="187966214864951" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="314389943005796" type="System">
+                            <param id="0" name="Object">EnemySprites</param>
+                            <param id="1" name="Expression">Enemy.enemyID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">EnemySprites.enemyID</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="965395570681300" type="System">
+                            <param id="0" name="First value">left(EnemySprites.AnimationName,4)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Dead&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="340104197971461" type="System">
+                            <param id="0" name="First value">left(EnemySprites.AnimationName,6)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Attack&quot;</param>
+                        </condition>
+                        <condition behavior="LineOfSight2" id="0" name="Has LOS to object" sid="926666336323907" type="Enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="500655300294520" type="Player">
+                            <param id="0" name="Instance variable">dead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="787471090425815" type="EnemySprites">
+                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Enemy.type</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="634920808435115" type="Enemy">
+                            <param id="0" name="Instance variable">close</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="145527799659243" type="Enemy">
+                            <param id="0" name="Object">EnemyAttack</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="989806506547505">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="507486235092630" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition behavior="LineOfSight2" id="0" inverted="1" name="Has LOS to object" sid="326032775011482" type="Enemy">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="747859303942949" type="Enemy">
+                            <param id="0" name="Instance variable">close</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Ajusta a animação do inimigo de acordo com o que ele está fazendo</comment>
+                <event-block sid="618258638522748">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="918942135117906" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="882848294059018" type="System">
+                            <param id="0" name="Object">EnemySprites</param>
+                            <param id="1" name="Expression">Enemy.enemyID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">EnemySprites.enemyID</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="369668989233991" type="System">
+                            <param id="0" name="First value">left(EnemySprites.AnimationName,4)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Dead&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Compare two values" sid="581632566491657" type="System">
+                            <param id="0" name="First value">left(EnemySprites.AnimationName,6)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="773462141816351">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="508310490764301" type="Enemy">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="Speed">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="413044529281946" type="EnemySprites">
+                                    <param id="0" name="Animation">&quot;Walk&quot; &amp; Enemy.type</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="185062874307239">
+                            <conditions>
+                                <condition behavior="Pathfinding" id="6" name="Compare speed" sid="215984302366823" type="Enemy">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Speed">10</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="722883538961824" type="EnemySprites">
+                                    <param id="0" name="Animation">&quot;Idle&quot; &amp; Enemy.type</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="928050076802448">
+                    <conditions>
+                        <condition id="5" name="On any finished" sid="223825245620658" type="EnemySprites" />
+                        <condition id="-11" name="For Each" sid="737188866353206" type="System">
+                            <param id="0" name="Object">EnemySprites</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="449637327354334" type="System">
+                            <param id="0" name="First value">left(EnemySprites.AnimationName,6)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Attack&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="388939220763260" type="EnemySprites">
+                            <param id="0" name="Animation">&quot;Idle&quot; &amp; Enemy.type</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Quando um inimigo for atingido por um ataque do personagem</comment>
+                <event-block sid="644530435298114">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="795360655587380" type="Enemy">
+                            <param id="0" name="Object">PlayerAttack</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="431614394487390" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="817896257124986" type="Enemy">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Quando o life do inimigo for menor que zero</comment>
+                <comment>OBS: O Flash não está funcionando</comment>
+                <event-block sid="642251552081601">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="904605799130809" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="386752507154015" type="System">
+                            <param id="0" name="Object">EnemySprites</param>
+                            <param id="1" name="Expression">Enemy.enemyID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">EnemySprites.enemyID</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="533784681719516" type="Enemy">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="172761519958132" type="EnemySprites">
+                            <param id="0" name="Animation">&quot;Dead&quot; &amp; Enemy.type</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Flash" disabled="1" id="0" name="Flash" sid="793932225261876" type="EnemySprites">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Quando o inimigo morrer, espere 1 segundo e destrua seus componentes</comment>
+                <event-block sid="951310772934851">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="296266422901315" type="System">
+                            <param id="0" name="Object">EnemySprites</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="932135303784092" type="System">
+                            <param id="0" name="Object">Enemy</param>
+                            <param id="1" name="Expression">Enemy.enemyID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">EnemySprites.enemyID</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="493557197236508" type="System">
+                            <param id="0" name="First value">left(EnemySprites.AnimationName,4)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;Dead&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="146520708765382" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="386116179801613" type="Enemy" />
+                        <action id="-9" name="Destroy" sid="715329147667051" type="EnemySprites" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Enemy Events - Fim</comment>
+        <comment></comment>
+        <comment>Camera Events - Inicio</comment>
+        <comment>A camera segue o player enquanto um CameraTrigger não for ativado</comment>
+        <event-block sid="691647443784622">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="689048734362711" type="Camera">
+                    <param id="0" name="Instance variable">following</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="453419135956897" type="Camera">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="371771797909830" type="Camera">
+                    <param id="0" name="X">Player.X</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Quando um CameraTrigger surge na tela ,a camera salva o UID do mesmo</comment>
+        <event-block sid="499031170917294">
+            <conditions>
+                <condition id="-3" name="Is on-screen" sid="422170408172824" type="CameraTrigger" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="882073809763027" type="Camera">
+                    <param id="0" name="Instance variable">triggerUID</param>
+                    <param id="1" name="Value">CameraTrigger.UID</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>A camera para de seguir o personagem quando colide com um CameraTrigger</comment>
+        <event-block sid="245489814689101">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="726692174183838" type="Camera">
+                    <param id="0" name="Object">CameraTrigger</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="609782432730800" type="Camera">
+                    <param id="0" name="Instance variable">following</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="360208234326818" type="Camera">
+                    <param id="0" name="Instance variable">triggerUID</param>
+                    <param id="1" name="Value">CameraTrigger.UID</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="105098318765675" type="Camera">
+                    <param id="0" name="Instance variable">find</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="219774753559306">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="793017784705200" type="Enemy" />
+                <condition id="-33" name="Pick by comparison" sid="804678263366614" type="System">
+                    <param id="0" name="Object">CameraTrigger</param>
+                    <param id="1" name="Expression">CameraTrigger.UID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Camera.triggerUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="871218254924499" type="CameraTrigger">
+                    <param id="0" name="Instance variable">enemies</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="250767628957687" type="CameraTrigger">
+                    <param id="0" name="Instance variable">enemies</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Apos todos os inimigos serem destruidos, a camera volta a seguir o personagem</comment>
+        <event-block sid="283431962137459">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="381514627636726" type="System">
+                    <param id="0" name="Object">CameraTrigger</param>
+                    <param id="1" name="Expression">CameraTrigger.UID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Camera.triggerUID</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="280500715356811" type="CameraTrigger">
+                    <param id="0" name="Instance variable">enemies</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="735732936881810" type="Camera">
+                    <param id="0" name="Instance variable">find</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="330423291456913">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="121017121327948" type="Camera">
+                    <param id="0" name="Instance variable">find</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="902752357236550" type="Camera">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="118099212689217" type="Camera">
+                    <param id="0" name="X">Self.X + Player.8Direction.MaxSpeed * dt</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483561547632573">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="717342437219657" type="Camera">
+                    <param id="0" name="Instance variable">find</param>
+                </condition>
+                <condition id="-1" name="Compare X" sid="393163458769342" type="Camera">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="762655548064249" type="Camera">
+                    <param id="0" name="Instance variable">following</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="102914119837564" type="Camera">
+                    <param id="0" name="Instance variable">find</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

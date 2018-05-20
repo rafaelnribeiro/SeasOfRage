@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Seas of Rage</name>
+    <description></description>
+    <version>1.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website></author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>25900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Juan Pablo Tarquino" id="Rex_ZSorter" version="1">Z Sorter</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>320</width>
+        <height>180</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Preview browser">Firefox</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="Fundo1" sid="425918932885689">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Nível Cidade\bg1.png" />
+        </object-type>
+        <object-type name="Fundo2" sid="762376708520715">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Nível Cidade\bg3.png" />
+        </object-type>
+        <object-type name="PlayerSprites" sid="191500193031346">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="character" sid="960306735490452" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Idle1" pingpong="0" repeatcount="1" repeatto="0" sid="880416058120196" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle1.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle2.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle3.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle4.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle5.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle6.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle7.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle8.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Walk1" pingpong="0" repeatcount="1" repeatto="0" sid="879885676910719" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk\Mike_Walk1.png" />
+                    <frame duration="1" hotspotX="0.545455" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk\Mike_Walk2.png" />
+                    <frame duration="1" hotspotX="0.545455" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk\Mike_Walk3.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk\Mike_Walk4.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jump1" pingpong="0" repeatcount="1" repeatto="0" sid="978762855588709" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\JumpIdle\Mike_JumpIdle1.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="AttackA1" pingpong="0" repeatcount="1" repeatto="0" sid="909333947045157" speed="14">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="AttackB1" pingpong="0" repeatcount="1" repeatto="0" sid="964772636945099" speed="16">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                </animation>
+                <animation framecount="4" loop="0" name="AttackC1" pingpong="0" repeatcount="1" repeatto="0" sid="203505680585957" speed="14">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
+                </animation>
+                <animation framecount="5" loop="0" name="AttackD1" pingpong="0" repeatcount="1" repeatto="0" sid="520113454975020" speed="10">
+                    <frame duration="2" hotspotX="0.538462" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.388889" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.333333" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.238095" hotspotY="1" />
+                    <frame duration="3" hotspotX="0.238095" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dead1" pingpong="0" repeatcount="1" repeatto="0" sid="759692037727395" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Dead.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="729178035883437">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="EnemySprites" sid="285006761923877">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="ID para unir todos os componentes de uma mesma instância de inimigo" name="enemyID" sid="529857637488734" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Flash" sid="134580957980173">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Idle1" pingpong="0" repeatcount="1" repeatto="0" sid="409965493325525" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Idle.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Walk1" pingpong="0" repeatcount="1" repeatto="0" sid="907070564545250" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Walk1.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Walk2.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Walk3.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Walk4.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="719848198571906" speed="12">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Attack2.png" />
+                    <frame duration="1" hotspotX="0.421053" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Attack3.png" />
+                    <frame duration="0.5" hotspotX="0.421053" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Attack4.png" />
+                    <frame duration="1" hotspotX="0.421053" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dead1" pingpong="0" repeatcount="1" repeatto="0" sid="121625315976729" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Dead.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="ZSorter" sid="671351815355207">
+            <plugin id="Rex_ZSorter" />
+        </object-type>
+        <object-type name="Player" sid="531998822108285">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="life" sid="379018993357689" type="number" />
+                <instance-variable name="dead" sid="251278807110520" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="103468461906062">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826030894454882" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1">
+                        <image-point name="Imagepoint R" x="1" y="0.6" />
+                        <image-point name="Imagepoint L" x="0" y="0.6" />
+                        <image-point name="Imagepoint ER" x="1.33333" y="0.6" />
+                        <image-point name="Imagepoint EL" x="-0.333333" y="0.6" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerJump" sid="158177121716892">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="529328928591043">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="357646327939894" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InvisibleSolid" sid="485290597015682">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="235502306020219">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="PlayerAttack" sid="530666550832186">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="697304294234124">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="596543606657772" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy" sid="319353078508065">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Tipo do inimigo" name="type" sid="289906382624101" type="number" />
+                <instance-variable comment="ID para unir todos os componentes de uma mesma instância de inimigo" name="enemyID" sid="766020712436334" type="number" />
+                <instance-variable comment="Vida do inimigo" name="life" sid="658832188212192" type="number" />
+                <instance-variable name="active" sid="452621636972180" type="boolean" />
+                <instance-variable comment="Se o inimigo esta perto o suficiente para atacar" name="close" sid="594208488039178" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="410053062192355">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="LineOfSight1" sid="794186036573696">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="LineOfSight2" sid="172258652047574">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="301299899537991">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="919444520205827">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903089455203236" speed="5">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="1">
+                        <image-point name="Imagepoint 1" x="1" y="0.6" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Camera" sid="898548092006164">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Se a camera esta seguindo o player ou esta travada" name="following" sid="985711900846799" type="boolean" />
+                <instance-variable name="triggerUID" sid="421580615658002" type="number" />
+                <instance-variable name="find" sid="996516886231092" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="876440894483482">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="317741095868734" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LimitLeft" sid="224233370410345">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Pin" sid="451635559782169">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="LimitRight" sid="399343342526704">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Pin" sid="574814257531231">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="CameraTrigger" sid="266155597811479">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable comment="Número de inimigos que precisam ser destruídos para que a câmera volte a seguir o player" name="enemies" sid="730680743163793" type="number" />
+            </instance-variables>
+            <texture />
+        </object-type>
+        <object-type name="EnemyAttack" sid="281902315463076">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="584497747548126">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="698073607895301" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayerLife" sid="119747465935228">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\HUD\BarraVidaConteudo.png" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Game.xml</layout>
+        <layout>CharSelect.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>CharSelectEvents.xml</event-sheet>
+        <event-sheet>GameEvents.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+        <global-instance type="Function" uid="5" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
