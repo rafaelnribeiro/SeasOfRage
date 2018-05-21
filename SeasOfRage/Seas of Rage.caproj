@@ -14,8 +14,9 @@
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Juan Pablo Tarquino" id="Rex_ZSorter" version="1">Z Sorter</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
@@ -83,14 +84,30 @@
             </instance-variables>
             <animation-folder>
                 <animation framecount="8" loop="0" name="Idle1" pingpong="0" repeatcount="1" repeatto="0" sid="880416058120196" speed="5">
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle1.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle2.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle3.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle4.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle5.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle6.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle7.png" />
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle8.png" />
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle1.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.514286" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle2.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.5" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle3.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.514286" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle4.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.5" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle5.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.514286" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle6.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.5" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle7.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.514286" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle\Mike_Idle8.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.5" />
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Walk1" pingpong="0" repeatcount="1" repeatto="0" sid="879885676910719" speed="6">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk\Mike_Walk1.png" />
@@ -129,6 +146,11 @@
                 <animation framecount="1" loop="0" name="Dead1" pingpong="0" repeatcount="1" repeatto="0" sid="759692037727395" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Dead.png" />
                 </animation>
+                <animation framecount="1" loop="0" name="Idle2" pingpong="0" repeatcount="1" repeatto="0" sid="977255059954273" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Idle.png">
+                        <image-point name="Imagepoint 1" x="0.538462" y="0.514286" />
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Function" sid="729178035883437">
@@ -164,9 +186,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Dead.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type global="1" name="ZSorter" sid="671351815355207">
-            <plugin id="Rex_ZSorter" />
         </object-type>
         <object-type name="Player" sid="531998822108285">
             <plugin id="Sprite" />
@@ -319,6 +338,28 @@
         <object-type name="PlayerLife" sid="119747465935228">
             <plugin id="TiledBg" />
             <texture original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\HUD\BarraVidaConteudo.png" />
+        </object-type>
+        <object-type name="CharSelectBG" sid="487497699515172">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="Start" sid="829948766167916">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TextBox" sid="691961684069419">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="StartText" sid="849723510852593">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Select" sid="695502112111302">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282442447214207" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.512821" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

@@ -4,5 +4,70 @@
     <name>CharSelectEvents</name>
     <events>
         <variable constant="0" name="Character" sid="577059664224929" static="0" type="number">1</variable>
+        <event-block sid="660170143835695">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="664674573056741" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="149021470465376" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="0" name="Call function" sid="782779656828402" type="Function">
+                    <param id="0" name="Name">&quot;CharUpdate&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="252089702645005">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="911486508554114" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="180094042001005" type="System">
+                    <param id="0" name="Variable">Character</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="830427341904887" type="Function">
+                    <param id="0" name="Name">&quot;CharUpdate&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="759241300457320">
+            <conditions>
+                <condition id="0" name="On function" sid="749590633793654" type="Function">
+                    <param id="0" name="Name">&quot;CharUpdate&quot;</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="580916422285684" type="System">
+                    <param id="0" name="Object">PlayerSprites</param>
+                    <param id="1" name="Expression">PlayerSprites.character</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Character</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="683010691737626" type="Select">
+                    <param id="0" name="Object">PlayerSprites</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="561973448655627">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="763214412690999" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="609583506326960" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

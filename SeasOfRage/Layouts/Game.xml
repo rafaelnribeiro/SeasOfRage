@@ -835,13 +835,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="ZSorter" uid="11">
-            <properties>
-                <y-order>Increasing</y-order>
-                <x-order>Increasing</x-order>
-            </properties>
-        </instance>
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>
