@@ -372,6 +372,7 @@
                         <life>5</life>
                         <active>false</active>
                         <close>false</close>
+                        <scatter>false</scatter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -445,6 +446,7 @@
                         <life>5</life>
                         <active>false</active>
                         <close>false</close>
+                        <scatter>false</scatter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -518,6 +520,7 @@
                         <life>5</life>
                         <active>false</active>
                         <close>false</close>
+                        <scatter>false</scatter>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />

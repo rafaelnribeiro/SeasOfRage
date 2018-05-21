@@ -233,6 +233,7 @@
                 <instance-variable comment="Vida do inimigo" name="life" sid="658832188212192" type="number" />
                 <instance-variable name="active" sid="452621636972180" type="boolean" />
                 <instance-variable comment="Se o inimigo esta perto o suficiente para atacar" name="close" sid="594208488039178" type="boolean" />
+                <instance-variable name="scatter" sid="881360119653671" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="410053062192355">

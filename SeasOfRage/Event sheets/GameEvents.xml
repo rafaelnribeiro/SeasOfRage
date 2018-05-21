@@ -690,8 +690,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <comment>Quando o life do inimigo for menor que zero</comment>
-                <comment>OBS: O Flash não está funcionando</comment>
+                <comment>Quando o life do inimigo for menor que zero faça o seu sprite piscar por 1 segundo</comment>
                 <event-block sid="642251552081601">
                     <conditions>
                         <condition id="-11" name="For Each" sid="904605799130809" type="System">
@@ -708,22 +707,31 @@
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="857649772781562" type="EnemySprites" />
                     </conditions>
                     <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="803218367529206" type="Enemy">
+                            <param id="0" name="Tag">&quot;scatter&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="788134322853194" type="Enemy">
+                            <param id="0" name="Instance variable">scatter</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action id="4" name="Set animation" sid="172761519958132" type="EnemySprites">
                             <param id="0" name="Animation">&quot;Dead&quot; &amp; Enemy.type</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Flash" disabled="1" id="0" name="Flash" sid="793932225261876" type="EnemySprites">
+                        <action behavior="Flash" id="0" name="Flash" sid="793932225261876" type="EnemySprites">
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
                     </actions>
                 </event-block>
-                <comment>Quando o inimigo morrer, espere 1 segundo e destrua seus componentes</comment>
+                <comment>Quando o sprite do inimigo terminar de piscar, destrua seus componentes</comment>
                 <event-block sid="951310772934851">
                     <conditions>
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="526166855997892" type="EnemySprites" />
                         <condition id="-11" name="For Each" sid="296266422901315" type="System">
                             <param id="0" name="Object">EnemySprites</param>
                         </condition>
@@ -733,19 +741,80 @@
                             <param id="2" name="Comparison">0</param>
                             <param id="3" name="Value">EnemySprites.enemyID</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="493557197236508" type="System">
-                            <param id="0" name="First value">left(EnemySprites.AnimationName,4)</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">&quot;Dead&quot;</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="146520708765382" type="System">
-                            <param id="0" name="Seconds">1.0</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="386116179801613" type="Enemy" />
                         <action id="-9" name="Destroy" sid="715329147667051" type="EnemySprites" />
                     </actions>
+                </event-block>
+                <comment>Faz com que os inimigos se afastem caso estejam sobrepostos</comment>
+                <event-block sid="799275658708523">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="321185603740145" type="Enemy">
+                            <param id="0" name="Object">Enemy</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="254377977673355" type="Enemy">
+                            <param id="0" name="Instance variable">life</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="146922762942406" type="Enemy">
+                            <param id="0" name="Instance variable">scatter</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="0" name="Find path" sid="221894120521871" type="Enemy">
+                            <param id="0" name="X">Self.X + random(-8,8)</param>
+                            <param id="1" name="Y">Self.Y + random(-8,8)</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="453334181736274" type="Enemy">
+                            <param id="0" name="Duration">0.25</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;scatter&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="942639156346833">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="973536535856289" type="Enemy">
+                            <param id="0" name="Tag">&quot;scatter&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="924952760586331">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="545892209047833" type="Enemy">
+                                    <param id="0" name="Object">Enemy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="455803177331681" type="Enemy">
+                                    <param id="0" name="Instance variable">scatter</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="913831037122999">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="483607564123904" type="Enemy">
+                                    <param id="0" name="Object">Enemy</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Pathfinding" id="0" name="Find path" sid="265369679613937" type="Enemy">
+                                    <param id="0" name="X">Self.X + random(-8,8)</param>
+                                    <param id="1" name="Y">Self.Y + random(-8,8)</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="295109717618296" type="Enemy">
+                                    <param id="0" name="Duration">0.25</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;scatter&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
