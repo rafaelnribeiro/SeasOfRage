@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
@@ -182,8 +183,159 @@
                     <frame duration="0.5" hotspotX="0.421053" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Attack4.png" />
                     <frame duration="1" hotspotX="0.421053" hotspotY="1" />
                 </animation>
+                <animation framecount="1" loop="0" name="Hit1" pingpong="0" repeatcount="1" repeatto="0" sid="921230091050290" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Damage.png" />
+                </animation>
                 <animation framecount="1" loop="0" name="Dead1" pingpong="0" repeatcount="1" repeatto="0" sid="121625315976729" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Dead.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Idle2" pingpong="0" repeatcount="1" repeatto="0" sid="516916837141287" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Idle.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="Walk2" pingpong="0" repeatcount="1" repeatto="0" sid="682934006765892" speed="5">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Walk1.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.0571429" />
+                            <point x="0.461538" y="0" />
+                            <point x="0.615385" y="0.142857" />
+                            <point x="0.615385" y="0.485714" />
+                            <point x="0.846154" y="0.942857" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Walk2.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.0555556" />
+                            <point x="0.461538" y="0" />
+                            <point x="0.769231" y="0.0833333" />
+                            <point x="0.615385" y="0.5" />
+                            <point x="0.538462" y="0.833333" />
+                            <point x="0.461538" y="0.972222" />
+                            <point x="0" y="1" />
+                            <point x="0.153846" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Walk3.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.0540541" />
+                            <point x="0.461538" y="0" />
+                            <point x="0.615385" y="0.135135" />
+                            <point x="0.615385" y="0.486486" />
+                            <point x="0.461538" y="0.810811" />
+                            <point x="0.461538" y="0.972973" />
+                            <point x="0.0769231" y="0.972973" />
+                            <point x="0.153846" y="0.486486" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Walk4.png">
+                        <collision-poly>
+                            <point x="0.153846" y="0.0540541" />
+                            <point x="0.461538" y="0.027027" />
+                            <point x="0.615385" y="0.135135" />
+                            <point x="0.615385" y="0.486486" />
+                            <point x="0.538462" y="0.837838" />
+                            <point x="0.461538" y="0.972973" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Attack2" pingpong="0" repeatcount="1" repeatto="0" sid="468017873416363" speed="12">
+                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Attack1.png">
+                        <collision-poly>
+                            <point x="0.230769" y="0.0857143" />
+                            <point x="0.461538" y="0" />
+                            <point x="0.846154" y="0.0571429" />
+                            <point x="0.692308" y="0.485714" />
+                            <point x="0.923077" y="0.971429" />
+                            <point x="0.461538" y="0.971429" />
+                            <point x="0" y="1" />
+                            <point x="0.153846" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.421053" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Attack2.png">
+                        <collision-poly>
+                            <point x="0.263158" y="0.142857" />
+                            <point x="0.473684" y="0" />
+                            <point x="0.578947" y="0.228571" />
+                            <point x="0.526316" y="0.485714" />
+                            <point x="0.684211" y="0.828571" />
+                            <point x="0.473684" y="0.971429" />
+                            <point x="0.0526316" y="0.971429" />
+                            <point x="0.210526" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="0.5" hotspotX="0.413793" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Attack3.png">
+                        <collision-poly>
+                            <point x="0.172414" y="0.142857" />
+                            <point x="0.482759" y="0.314286" />
+                            <point x="0.62069" y="0.314286" />
+                            <point x="0.344828" y="0.485714" />
+                            <point x="0.344828" y="0.457143" />
+                            <point x="0.482759" y="0.342857" />
+                            <point x="0.0344828" y="0.971429" />
+                            <point x="0.137931" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.421053" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Attack4.png">
+                        <collision-poly>
+                            <point x="0.263158" y="0.142857" />
+                            <point x="0.473684" y="0" />
+                            <point x="0.578947" y="0.228571" />
+                            <point x="0.526316" y="0.485714" />
+                            <point x="0.684211" y="0.828571" />
+                            <point x="0.473684" y="0.971429" />
+                            <point x="0.0526316" y="0.971429" />
+                            <point x="0.210526" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Dead2" pingpong="0" repeatcount="1" repeatto="0" sid="417874293770891" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Morto.png">
+                        <collision-poly>
+                            <point x="0.0277778" y="0.125" />
+                            <point x="0.5" y="0.125" />
+                            <point x="0.916667" y="0.375" />
+                            <point x="0.972222" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Hit2" pingpong="0" repeatcount="1" repeatto="0" sid="398303285528995" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Idle5" pingpong="0" repeatcount="1" repeatto="0" sid="324635253953514" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle_T\Mike_Idle_T1.png" />
+                </animation>
+                <animation framecount="6" loop="0" name="Walk5" pingpong="0" repeatcount="1" repeatto="0" sid="657641688835894" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T2.png" />
+                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T3.png" />
+                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T6.png" />
+                </animation>
+                <animation framecount="2" loop="0" name="Attack5" pingpong="0" repeatcount="1" repeatto="0" sid="620618350082755" speed="5">
+                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Attack_T\frame1 attack 1.png">
+                        <collision-poly>
+                            <point x="0.0681818" y="0.166667" />
+                            <point x="0.5" y="0.296296" />
+                            <point x="0.931818" y="0.166667" />
+                            <point x="0.871212" y="0.5" />
+                            <point x="0.856061" y="0.648148" />
+                            <point x="0.5" y="0.462963" />
+                            <point x="0.030303" y="0.925926" />
+                            <point x="0.030303" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Attack_T\frame1 attack 2.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Hit5" pingpong="0" repeatcount="1" repeatto="0" sid="238956600520886" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                </animation>
+                <animation framecount="1" loop="0" name="Dead5" pingpong="0" repeatcount="1" repeatto="0" sid="137170400613870" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -200,7 +352,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826030894454882" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="1">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.6">
                         <image-point name="Imagepoint R" x="1" y="0.6" />
                         <image-point name="Imagepoint L" x="0" y="0.6" />
                         <image-point name="Imagepoint ER" x="1.33333" y="0.6" />
@@ -253,15 +405,17 @@
                 <instance-variable name="active" sid="452621636972180" type="boolean" />
                 <instance-variable comment="Se o inimigo esta perto o suficiente para atacar" name="close" sid="594208488039178" type="boolean" />
                 <instance-variable name="scatter" sid="881360119653671" type="boolean" />
+                <instance-variable comment="Se o inimigo foi atingido" name="hit" sid="790732782468852" type="boolean" />
+                <instance-variable comment="Tipo do próximo ataque(Apenas para o boss)" name="nextAttack" sid="874077129547566" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Timer" sid="410053062192355">
                     <behavior id="Timer" />
                 </behavior-type>
-                <behavior-type name="LineOfSight1" sid="794186036573696">
+                <behavior-type name="LineOfSight" sid="794186036573696">
                     <behavior id="LOS" />
                 </behavior-type>
-                <behavior-type name="LineOfSight2" sid="172258652047574">
+                <behavior-type name="LineOfSightAttack" sid="172258652047574">
                     <behavior id="LOS" />
                 </behavior-type>
                 <behavior-type name="Pathfinding" sid="301299899537991">
@@ -273,7 +427,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903089455203236" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="1">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.6" original-source="E:\Rafael\Downloads\marlon\faca1.png">
                         <image-point name="Imagepoint 1" x="1" y="0.6" />
                     </frame>
                 </animation>
@@ -322,8 +476,11 @@
             </instance-variables>
             <texture />
         </object-type>
-        <object-type name="EnemyAttack" sid="281902315463076">
+        <object-type name="EnemyMeeleAttack" sid="281902315463076">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="damage" sid="942039977208612" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Fade" sid="584497747548126">
                     <behavior id="Fade" />
@@ -358,6 +515,105 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282442447214207" speed="5">
                     <frame duration="1" hotspotX="0.529412" hotspotY="0.512821" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyRangedAttack" sid="674697175471936">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="rangedAttackID" sid="621867578369525" type="number" />
+                <instance-variable name="damage" sid="621570100708963" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="439405016017525">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="142907088416318" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.514286" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Esfaqueador\Attack3.png">
+                        <collision-poly>
+                            <point x="0.172414" y="0.142857" />
+                            <point x="0.482759" y="0.314286" />
+                            <point x="0.62069" y="0.314286" />
+                            <point x="0.344828" y="0.485714" />
+                            <point x="0.344828" y="0.457143" />
+                            <point x="0.482759" y="0.342857" />
+                            <point x="0.0344828" y="0.971429" />
+                            <point x="0.137931" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RangedAttackSprite" sid="826767989144441">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="rangedAttackID" sid="272846688431069" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621025207681271" speed="5">
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca2b.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca1b.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.498462" original-source="E:\Rafael\Downloads\Sprites\faca1.png">
+                        <collision-poly>
+                            <point x="0.547692" y="0.547692" />
+                            <point x="0.501538" y="0.661538" />
+                            <point x="0.446154" y="0.553846" />
+                            <point x="0.138462" y="0.501538" />
+                            <point x="0.44" y="0.44" />
+                            <point x="0.501538" y="0.341538" />
+                            <point x="0.553846" y="0.446154" />
+                            <point x="0.769231" y="0.501538" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca4b.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501538" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca4.png" />
+                    <frame duration="1" hotspotX="0.498462" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca3b.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

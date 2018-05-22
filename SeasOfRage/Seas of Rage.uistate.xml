@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Game</layout>
-        <layout order="2">CharSelect</layout>
+        <layout order="0">CharSelect</layout>
+        <layout order="2">Game</layout>
         <event-sheet order="1">CharSelectEvents</event-sheet>
         <event-sheet active="1" order="3">GameEvents</event-sheet>
     </open-tabs>
@@ -37,7 +37,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/PlayerAttack/" />
         <folder expanded="1" path="animation-folder/Enemy/" />
         <folder expanded="1" path="animation-folder/Camera/" />
-        <folder expanded="1" path="animation-folder/EnemyAttack/" />
+        <folder expanded="1" path="animation-folder/EnemyMeeleAttack/" />
         <folder expanded="1" path="animation-folder/Select/" />
+        <folder expanded="1" path="animation-folder/EnemyRangedAttack/" />
+        <folder expanded="1" path="animation-folder/RangedAttackSprite/" />
     </folders-expanded>
 </c2uistate>
