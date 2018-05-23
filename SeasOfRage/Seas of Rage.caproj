@@ -72,7 +72,7 @@
         </object-type>
         <object-type name="Fundo1" sid="425918932885689">
             <plugin id="TiledBg" />
-            <texture original-source="E:\Rafael\Downloads\Sprites\WhatsApp Image 2018-05-23 at 01.10.45.jpeg" />
+            <texture original-source="E:\Rafael\Downloads\Sprites\bg.jpeg" />
         </object-type>
         <object-type name="PlayerSprites" sid="191500193031346">
             <plugin id="Sprite" />
