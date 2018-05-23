@@ -49,26 +49,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fundo2" uid="1">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <hotspot>Top-left</hotspot>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>638</width>
-                        <height>180</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -101,41 +81,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>109.520721436</x>
-                        <y>154.335342407</y>
+                        <x>152.883544922</x>
+                        <y>156.485046387</y>
                         <z>0</z>
-                        <width>13</width>
+                        <width>20</width>
                         <height>35</height>
                         <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemySprites" uid="19">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <enemyID>1</enemyID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>362.559997559</x>
-                        <y>140.183959961</y>
-                        <z>0</z>
-                        <width>13</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
+                        <hotspotX>0.502074718</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -168,8 +120,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>106.996658325</x>
-                        <y>157.450241089</y>
+                        <x>154.199035645</x>
+                        <y>158.640151978</y>
                         <z>0</z>
                         <width>15</width>
                         <height>5</height>
@@ -359,158 +311,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Enemy" uid="18">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <type>2</type>
-                        <enemyID>1</enemyID>
-                        <life>5</life>
-                        <active>false</active>
-                        <close>false</close>
-                        <scatter>false</scatter>
-                        <hit>false</hit>
-                        <nextAttack>1</nextAttack>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>150</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSightAttack">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>20</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>4</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>48</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>8 directions</directions>
-                                <set-angle>360 degree (smooth)</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>361.094421387</x>
-                        <y>141.371612549</y>
-                        <z>0</z>
-                        <width>15</width>
-                        <height>2</height>
-                        <depth>0</depth>
-                        <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Enemy" uid="21">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <type>2</type>
-                        <enemyID>2</enemyID>
-                        <life>5</life>
-                        <active>false</active>
-                        <close>false</close>
-                        <scatter>false</scatter>
-                        <hit>false</hit>
-                        <nextAttack>1</nextAttack>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>150</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSightAttack">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>20</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>4</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>48</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>8 directions</directions>
-                                <set-angle>360 degree (smooth)</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>176.463409424</x>
-                        <y>154.5415802</y>
-                        <z>0</z>
-                        <width>15</width>
-                        <height>2</height>
-                        <depth>0</depth>
-                        <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Enemy" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -519,7 +319,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <type>1</type>
+                        <type>2</type>
                         <enemyID>3</enemyID>
                         <life>5</life>
                         <active>false</active>
@@ -542,7 +342,7 @@
                             <properties>
                                 <obstacles>Solids</obstacles>
                                 <range>20</range>
-                                <cone-of-view>360</cone-of-view>
+                                <cone-of-view>5</cone-of-view>
                                 <use-collision-cells>No</use-collision-cells>
                             </properties>
                         </behavior-instance>
@@ -575,8 +375,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>405.943115234</x>
-                        <y>157.257171631</y>
+                        <x>22.970504761</x>
+                        <y>173.916763306</y>
                         <z>0</z>
                         <width>15</width>
                         <height>2</height>
@@ -587,38 +387,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemySprites" uid="23">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <enemyID>2</enemyID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>177.928985596</x>
-                        <y>151.716033936</y>
-                        <z>0</z>
-                        <width>13</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="EnemySprites" uid="24">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Idle2</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -631,13 +403,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>407.954528809</x>
-                        <y>156.069747925</y>
+                        <x>24.981918335</x>
+                        <y>172.7293396</y>
                         <z>0</z>
-                        <width>13</width>
-                        <height>35</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
+                        <hotspotX>0.500364721</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -682,7 +454,7 @@
                 <instance type="EnemySprites" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>Idle1</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -695,13 +467,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>370.890441895</x>
-                        <y>175.48664856</y>
+                        <x>264.340545654</x>
+                        <y>164.447631836</y>
                         <z>0</z>
-                        <width>13</width>
-                        <height>35</height>
+                        <width>32</width>
+                        <height>32</height>
                         <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -738,7 +510,7 @@
                             <properties>
                                 <obstacles>Solids</obstacles>
                                 <range>20</range>
-                                <cone-of-view>360</cone-of-view>
+                                <cone-of-view>5</cone-of-view>
                                 <use-collision-cells>No</use-collision-cells>
                             </properties>
                         </behavior-instance>
@@ -771,118 +543,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>369.424865723</x>
-                        <y>176.674301147</y>
+                        <x>262.874969482</x>
+                        <y>165.635284424</y>
                         <z>0</z>
                         <width>15</width>
                         <height>2</height>
                         <depth>0</depth>
                         <hotspotX>0.533333361</hotspotX>
                         <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Enemy" uid="35">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <type>1</type>
-                        <enemyID>4</enemyID>
-                        <life>5</life>
-                        <active>false</active>
-                        <close>false</close>
-                        <scatter>false</scatter>
-                        <hit>false</hit>
-                        <nextAttack>1</nextAttack>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>150</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSightAttack">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>20</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>4</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>48</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>8 directions</directions>
-                                <set-angle>360 degree (smooth)</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>342.06842041</x>
-                        <y>174.374038696</y>
-                        <z>0</z>
-                        <width>15</width>
-                        <height>2</height>
-                        <depth>0</depth>
-                        <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemySprites" uid="36">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <enemyID>4</enemyID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>343.137481689</x>
-                        <y>171.945175171</y>
-                        <z>0</z>
-                        <width>13</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -945,111 +613,7 @@
                         <height>13</height>
                         <depth>0</depth>
                         <hotspotX>0.501538455</hotspotX>
-                        <hotspotY>0.501538455</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Enemy" uid="39">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <type>2</type>
-                        <enemyID>7</enemyID>
-                        <life>5</life>
-                        <active>false</active>
-                        <close>false</close>
-                        <scatter>false</scatter>
-                        <hit>false</hit>
-                        <nextAttack>1</nextAttack>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>150</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="LineOfSightAttack">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>20</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>No</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pathfinding">
-                            <properties>
-                                <cell-size>4</cell-size>
-                                <cell-border>-1</cell-border>
-                                <obstacles>Solids</obstacles>
-                                <max-speed>48</max-speed>
-                                <acceleration>1000</acceleration>
-                                <deceleration>2000</deceleration>
-                                <rotate-speed>135</rotate-speed>
-                                <rotate-object>No</rotate-object>
-                                <diagonals>Enabled</diagonals>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="8Direction">
-                            <properties>
-                                <max-speed>200</max-speed>
-                                <acceleration>600</acceleration>
-                                <deceleration>500</deceleration>
-                                <directions>8 directions</directions>
-                                <set-angle>360 degree (smooth)</set-angle>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>386.692047119</x>
-                        <y>156.921707153</y>
-                        <z>0</z>
-                        <width>15</width>
-                        <height>2</height>
-                        <depth>0</depth>
-                        <hotspotX>0.533333361</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="EnemySprites" uid="40">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <enemyID>7</enemyID>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>388.157623291</x>
-                        <y>154.096160889</y>
-                        <z>0</z>
-                        <width>13</width>
-                        <height>35</height>
-                        <depth>0</depth>
-                        <hotspotX>0.538461566</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotY>0.498461545</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -11,14 +11,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">CharSelect</layout>
-        <layout order="2">Game</layout>
+        <layout active="1" order="2">Game</layout>
         <event-sheet order="1">CharSelectEvents</event-sheet>
-        <event-sheet active="1" order="3">GameEvents</event-sheet>
+        <event-sheet order="3">GameEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="0" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="0" name="Configuration Settings" />
     </properties>
     <families-expanded root="1" />
