@@ -80,52 +80,138 @@
                 <instance-variable name="character" sid="960306735490452" type="number" />
             </instance-variables>
             <animation-folder>
+                <animation framecount="1" loop="0" name="Idle2" pingpong="0" repeatcount="1" repeatto="0" sid="455654516847555" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\idle alternativo.png">
+                        <image-point name="Imagepoint 1" x="0.342615" y="1.00105" />
+                        <collision-poly>
+                            <point x="0.460007" y="0.204929" />
+                            <point x="0.91887" y="0" />
+                            <point x="0.937063" y="0.48069" />
+                            <point x="0.906741" y="0.583152" />
+                            <point x="1" y="0.818435" />
+                            <point x="0.91887" y="1" />
+                            <point x="0.443835" y="0.971496" />
+                            <point x="0.154772" y="0.583152" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="Walk2" pingpong="0" repeatcount="1" repeatto="0" sid="463101970382583" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\move1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\move2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\move3.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jump2" pingpong="0" repeatcount="1" repeatto="0" sid="780537180542799" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\jumpo.png">
+                        <collision-poly>
+                            <point x="0.258581" y="0.211297" />
+                            <point x="0.518307" y="0.040795" />
+                            <point x="0.528604" y="0.439331" />
+                            <point x="0.511442" y="0.524059" />
+                            <point x="0.648741" y="0.718619" />
+                            <point x="0.518307" y="0.813808" />
+                            <point x="0.24714" y="0.84728" />
+                            <point x="0.0858124" y="0.524059" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="AttackA2" pingpong="0" repeatcount="1" repeatto="0" sid="829528907708469" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\atack2.png" />
+                    <frame duration="1" hotspotX="0.413659" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\atack2b.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="AttackB2" pingpong="0" repeatcount="1" repeatto="0" sid="778379351773433" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\atack1.png">
+                        <collision-poly>
+                            <point x="0.534198" y="0.0408805" />
+                            <point x="0.96934" y="0.248428" />
+                            <point x="0.876179" y="0.525157" />
+                            <point x="0.706368" y="0.568134" />
+                            <point x="0.534198" y="0.960168" />
+                            <point x="0.139151" y="0.766247" />
+                            <point x="0.0884434" y="0.525157" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Dead2" pingpong="0" repeatcount="1" repeatto="0" sid="459674648196204" speed="5">
+                    <frame duration="1" hotspotX="1.02308" hotspotY="0.540613" original-source="E:\Rafael\Downloads\Sprites\chihiro\chihiro\dead.png" />
+                </animation>
                 <animation framecount="1" loop="0" name="Idle1" pingpong="0" repeatcount="1" repeatto="0" sid="952181725685156" speed="6">
-                    <frame duration="1" hotspotX="0.502075" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.501908" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem21.png">
+                        <image-point name="Imagepoint 1" x="0.522901" y="0.998952" />
+                    </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Walk1" pingpong="0" repeatcount="1" repeatto="0" sid="879885676910719" speed="6">
-                    <frame duration="1" hotspotX="0.502075" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem21.png" />
+                    <frame duration="1" hotspotX="0.501908" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem21.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem22.png" />
-                    <frame duration="1" hotspotX="0.502041" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem23.png" />
+                    <frame duration="1" hotspotX="0.501908" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem23.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\Imagem24.png" />
                 </animation>
                 <animation framecount="1" loop="0" name="Jump1" pingpong="0" repeatcount="1" repeatto="0" sid="239529040497940" speed="6">
-                    <frame duration="1" hotspotX="0.502075" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.501908" hotspotY="1" />
                 </animation>
-                <animation framecount="4" loop="0" name="AttackA1" pingpong="0" repeatcount="1" repeatto="0" sid="909333947045157" speed="14">
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                </animation>
-                <animation framecount="4" loop="0" name="AttackB1" pingpong="0" repeatcount="1" repeatto="0" sid="964772636945099" speed="16">
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                </animation>
-                <animation framecount="1" loop="0" name="AttackJumping1" pingpong="0" repeatcount="1" repeatto="0" sid="968406730105481" speed="16">
-                    <frame duration="3" hotspotX="0.526316" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\JumpAttack\Mike_JumpAttack3.png" />
-                </animation>
-                <animation framecount="4" loop="0" name="AttackC1" pingpong="0" repeatcount="1" repeatto="0" sid="203505680585957" speed="14">
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.411765" hotspotY="1" />
-                </animation>
-                <animation framecount="5" loop="0" name="AttackD1" pingpong="0" repeatcount="1" repeatto="0" sid="520113454975020" speed="10">
-                    <frame duration="2" hotspotX="0.538462" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.388889" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.333333" hotspotY="1" />
-                    <frame duration="1" hotspotX="0.238095" hotspotY="1" />
-                    <frame duration="3" hotspotX="0.238095" hotspotY="1" />
+                <animation framecount="2" loop="0" name="AttackA1" pingpong="0" repeatcount="1" repeatto="0" sid="909333947045157" speed="14">
+                    <frame duration="1" hotspotX="0.724932" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\preparandomurro.png">
+                        <collision-poly>
+                            <point x="0.12" y="0.14823" />
+                            <point x="0.577143" y="0.00442478" />
+                            <point x="0.731429" y="0.382743" />
+                            <point x="0.754286" y="0.502212" />
+                            <point x="0.994286" y="0.825221" />
+                            <point x="0.577143" y="0.849558" />
+                            <point x="0.32" y="0.701327" />
+                            <point x="0.122857" y="0.502212" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.278175" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\murro.png">
+                        <collision-poly>
+                            <point x="0.27381" y="0.274419" />
+                            <point x="0.496032" y="0.0116279" />
+                            <point x="0.619048" y="0.390698" />
+                            <point x="0.986111" y="0.525581" />
+                            <point x="0.519841" y="0.544186" />
+                            <point x="0.496032" y="0.876744" />
+                            <point x="0.178571" y="0.888372" />
+                            <point x="0.00396825" y="0.525581" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Dead1" pingpong="0" repeatcount="1" repeatto="0" sid="759692037727395" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Dead.png" />
+                    <frame duration="1" hotspotX="0.705128" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\personagem1\morot.png">
+                        <collision-poly>
+                            <point x="0.195783" y="0.278325" />
+                            <point x="0.51506" y="0.162562" />
+                            <point x="0.870482" y="0.248768" />
+                            <point x="0.975904" y="0.539409" />
+                            <point x="0.692771" y="0.684729" />
+                            <point x="0.51506" y="0.926108" />
+                            <point x="0.0301205" y="0.935961" />
+                            <point x="0.228916" y="0.539409" />
+                        </collision-poly>
+                    </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Idle2" pingpong="0" repeatcount="1" repeatto="0" sid="977255059954273" speed="5">
-                    <frame duration="1" hotspotX="0.538462" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Inimigos\Lutador\Lutador_Idle.png">
-                        <image-point name="Imagepoint 1" x="0.538462" y="0.514286" />
+                <animation framecount="2" loop="0" name="AttackB1" pingpong="0" repeatcount="1" repeatto="0" sid="499435066035005" speed="14">
+                    <frame duration="1" hotspotX="0.724932" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.12" y="0.14823" />
+                            <point x="0.577143" y="0.00442478" />
+                            <point x="0.731429" y="0.382743" />
+                            <point x="0.754286" y="0.502212" />
+                            <point x="0.994286" y="0.825221" />
+                            <point x="0.577143" y="0.849558" />
+                            <point x="0.32" y="0.701327" />
+                            <point x="0.122857" y="0.502212" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.278175" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.27381" y="0.274419" />
+                            <point x="0.496032" y="0.0116279" />
+                            <point x="0.619048" y="0.390698" />
+                            <point x="0.986111" y="0.525581" />
+                            <point x="0.519841" y="0.544186" />
+                            <point x="0.496032" y="0.876744" />
+                            <point x="0.178571" y="0.888372" />
+                            <point x="0.00396825" y="0.525581" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -157,16 +243,37 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Walk1" pingpong="0" repeatcount="1" repeatto="0" sid="392039273525178" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                <animation framecount="4" loop="0" name="Walk1" pingpong="0" repeatcount="1" repeatto="0" sid="392039273525178" speed="5">
+                    <frame duration="1" hotspotX="0.501355" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\enemy1\inimigo2 andando1.png">
                         <collision-poly>
-                            <point x="1" y="0.789145" />
-                            <point x="0.914706" y="1" />
-                            <point x="0.430858" y="1" />
-                            <point x="0.173709" y="0.623908" />
-                            <point x="0.285366" y="0.149938" />
-                            <point x="0.914706" y="0.0129648" />
-                            <point x="1" y="0.482586" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501355" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\enemy1\inimigo2 andando2.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501355" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.501355" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\enemy1\inimigo2 andando3.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -313,40 +420,111 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="Hit2" pingpong="0" repeatcount="1" repeatto="0" sid="398303285528995" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                </animation>
                 <animation framecount="1" loop="0" name="Idle5" pingpong="0" repeatcount="1" repeatto="0" sid="324635253953514" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Idle_T\Mike_Idle_T1.png" />
-                </animation>
-                <animation framecount="6" loop="0" name="Walk5" pingpong="0" repeatcount="1" repeatto="0" sid="657641688835894" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T2.png" />
-                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T3.png" />
-                    <frame duration="1" hotspotX="0.512821" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T4.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T5.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Walk_T\Mike_Walk_T6.png" />
-                </animation>
-                <animation framecount="2" loop="0" name="Attack5" pingpong="0" repeatcount="1" repeatto="0" sid="620618350082755" speed="5">
-                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Attack_T\frame1 attack 1.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\iddle.png">
                         <collision-poly>
-                            <point x="0.0681818" y="0.166667" />
-                            <point x="0.5" y="0.296296" />
-                            <point x="0.931818" y="0.166667" />
-                            <point x="0.871212" y="0.5" />
-                            <point x="0.856061" y="0.648148" />
-                            <point x="0.5" y="0.462963" />
-                            <point x="0.030303" y="0.925926" />
-                            <point x="0.030303" y="0.5" />
+                            <point x="0.682377" y="0.442291" />
+                            <point x="0.767418" y="0.806167" />
+                            <point x="0.403689" y="0.965639" />
+                            <point x="0.0584016" y="0.790308" />
+                            <point x="0.231557" y="0.442291" />
+                            <point x="0.154713" y="0.177093" />
+                            <point x="0.403689" y="0.0977974" />
+                            <point x="0.57377" y="0.244934" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.515152" hotspotY="1" original-source="E:\Rafael\Área de Trabalho\Beat&apos;em up DevVlog - Materiais\Beat&apos;em up Personagem\Attack_T\frame1 attack 2.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="Hit5" pingpong="0" repeatcount="1" repeatto="0" sid="238956600520886" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                <animation framecount="2" loop="0" name="Walk5" pingpong="0" repeatcount="1" repeatto="0" sid="657641688835894" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\move1.png">
+                        <collision-poly>
+                            <point x="0.682377" y="0.442291" />
+                            <point x="0.767418" y="0.806167" />
+                            <point x="0.403689" y="0.965639" />
+                            <point x="0.0584016" y="0.790308" />
+                            <point x="0.231557" y="0.442291" />
+                            <point x="0.154713" y="0.177093" />
+                            <point x="0.403689" y="0.0977974" />
+                            <point x="0.57377" y="0.244934" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\move2.png">
+                        <collision-poly>
+                            <point x="0.682377" y="0.444248" />
+                            <point x="0.767418" y="0.809735" />
+                            <point x="0.403689" y="0.975221" />
+                            <point x="0.0584016" y="0.793805" />
+                            <point x="0.231557" y="0.444248" />
+                            <point x="0.154713" y="0.177876" />
+                            <point x="0.403689" y="0.0982301" />
+                            <point x="0.57377" y="0.246018" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Attack51" pingpong="0" repeatcount="1" repeatto="0" sid="620618350082755" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\atack1.png">
+                        <collision-poly>
+                            <point x="0.97926" y="0.442291" />
+                            <point x="0.97926" y="0.934639" />
+                            <point x="0.403689" y="0.399478" />
+                            <point x="0" y="0.613542" />
+                            <point x="0" y="0.442291" />
+                            <point x="0" y="0.0569754" />
+                            <point x="0.403689" y="0.20682" />
+                            <point x="0.932843" y="0.0569754" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Attack52" pingpong="0" repeatcount="1" repeatto="0" sid="215960660296295" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\atack2.png">
+                        <collision-poly>
+                            <point x="0.067157" y="0.0569754" />
+                            <point x="0.596311" y="0.20682" />
+                            <point x="1" y="0.0569754" />
+                            <point x="1" y="0.442291" />
+                            <point x="1" y="0.613542" />
+                            <point x="0.596311" y="0.399478" />
+                            <point x="0.02074" y="0.934639" />
+                            <point x="0.02074" y="0.442291" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Hit5" pingpong="0" repeatcount="1" repeatto="0" sid="671621742992037" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <collision-poly>
+                            <point x="0.682377" y="0.442291" />
+                            <point x="0.767418" y="0.806167" />
+                            <point x="0.403689" y="0.965639" />
+                            <point x="0.0584016" y="0.790308" />
+                            <point x="0.231557" y="0.442291" />
+                            <point x="0.154713" y="0.177093" />
+                            <point x="0.403689" y="0.0977974" />
+                            <point x="0.57377" y="0.244934" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="Dead5" pingpong="0" repeatcount="1" repeatto="0" sid="137170400613870" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    <frame duration="1" hotspotX="0.916211" hotspotY="1" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\dead1.png">
+                        <collision-poly>
+                            <point x="0.905282" y="0.483619" />
+                            <point x="0.908015" y="0.865835" />
+                            <point x="0.493625" y="0.884555" />
+                            <point x="0.157559" y="0.731669" />
+                            <point x="0.06102" y="0.483619" />
+                            <point x="0.15847" y="0.237129" />
+                            <point x="0.493625" y="0.0343214" />
+                            <point x="0.743169" y="0.383775" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Hit2" pingpong="0" repeatcount="1" repeatto="0" sid="306469604644494" speed="12">
+                    <frame duration="1" hotspotX="0.499635" hotspotY="1">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -509,7 +687,7 @@
         </object-type>
         <object-type name="CharSelectBG" sid="487497699515172">
             <plugin id="TiledBg" />
-            <texture />
+            <texture original-source="E:\Rafael\Downloads\Sprites\Title.jpeg" />
         </object-type>
         <object-type name="Start" sid="829948766167916">
             <plugin id="TiledBg" />
@@ -520,12 +698,17 @@
         </object-type>
         <object-type name="StartText" sid="849723510852593">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Flash" sid="807082370486346">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="Select" sid="695502112111302">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="282442447214207" speed="5">
-                    <frame duration="1" hotspotX="0.529412" hotspotY="0.512821" />
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.923077" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -534,6 +717,7 @@
             <instance-variables>
                 <instance-variable name="rangedAttackID" sid="621867578369525" type="number" />
                 <instance-variable name="damage" sid="621570100708963" type="number" />
+                <instance-variable name="enemyType" sid="167883174846218" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Bullet" sid="439405016017525">
@@ -563,7 +747,7 @@
                 <instance-variable name="rangedAttackID" sid="272846688431069" type="number" />
             </instance-variables>
             <animation-folder>
-                <animation framecount="8" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="621025207681271" speed="5">
+                <animation framecount="8" loop="1" name="Enemy2" pingpong="0" repeatcount="1" repeatto="0" sid="621025207681271" speed="5">
                     <frame duration="1" hotspotX="0.501538" hotspotY="0.498462" original-source="E:\Rafael\Downloads\Sprites\faca1.png">
                         <collision-poly>
                             <point x="0.230769" y="0.501538" />
@@ -591,6 +775,32 @@
                     <frame duration="1" hotspotX="0.501538" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca2.png" />
                     <frame duration="1" hotspotX="0.501538" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\faca1b.png" />
                 </animation>
+                <animation framecount="1" loop="0" name="Enemy5" pingpong="0" repeatcount="1" repeatto="0" sid="919303071085776" speed="5">
+                    <frame duration="1" hotspotX="0.501538" hotspotY="0.501538" original-source="E:\Rafael\Downloads\Sprites\steve and bob\steve and bob\bullet1.png">
+                        <collision-poly>
+                            <point x="0.244131" y="0.244131" />
+                            <point x="0.497653" y="0.140845" />
+                            <point x="0.755869" y="0.244131" />
+                            <point x="0.85446" y="0.497653" />
+                            <point x="0.751174" y="0.751174" />
+                            <point x="0.497653" y="0.85446" />
+                            <point x="0.244131" y="0.755869" />
+                            <point x="0.140845" y="0.497653" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TitleBG" sid="451569357135517">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TitleName" sid="679732434231058">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="153095361065395" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500917" original-source="E:\Rafael\Downloads\Sprites\Title.jpeg" />
+                </animation>
             </animation-folder>
         </object-type>
     </object-folder>
@@ -598,10 +808,12 @@
     <layout-folder>
         <layout>Game.xml</layout>
         <layout>CharSelect.xml</layout>
+        <layout>Title.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>CharSelectEvents.xml</event-sheet>
         <event-sheet>GameEvents.xml</event-sheet>
+        <event-sheet>TitleEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Gamepad" uid="2">

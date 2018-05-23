@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="LevelEnd" sid="359966148515044" static="0" type="number">0</variable>
         <variable constant="0" name="KnifeCount" sid="351243813380101" static="0" type="number">0</variable>
         <event-block sid="784310871723468">
             <conditions>
@@ -81,6 +82,35 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="429168091548306">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="679326971946789" type="System">
+                    <param id="0" name="Variable">LevelEnd</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="637239981681064" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="516593644264283" type="PlayerJump">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="988614452427464" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Platform" id="7" name="Simulate control" sid="602358930188885" type="PlayerJump">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action id="-16" name="Wait" sid="449305332686018" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="774921200556041" type="System">
+                    <param id="0" name="Layout">Title</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="562885030251477">
             <conditions>
                 <condition id="0" name="On function" sid="569989989986855" type="Function">
@@ -140,6 +170,11 @@
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="445361061152439" type="Player">
                     <param id="0" name="Instance variable">dead</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="141696269694963" type="System">
+                    <param id="0" name="Variable">LevelEnd</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions />
@@ -594,7 +629,7 @@
                 <event-block sid="292151113780658">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="607416202124331" type="System">
-                            <param id="0" name="Interval (seconds)">3</param>
+                            <param id="0" name="Interval (seconds)">0.8</param>
                         </condition>
                         <condition id="-11" name="For Each" sid="146348833320365" type="System">
                             <param id="0" name="Object">Enemy</param>
@@ -801,6 +836,10 @@
                             <param id="0" name="X">EnemyRangedAttack.X</param>
                             <param id="1" name="Y">EnemyRangedAttack.Y -20</param>
                         </action>
+                        <action id="4" name="Set animation" sid="285202195869812" type="RangedAttackSprite">
+                            <param id="0" name="Animation">&quot;Enemy&quot; &amp; EnemyRangedAttack.enemyType</param>
+                            <param id="1" name="From">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Inimigo tipo 5(Boss) ataque tipo 1</comment>
@@ -850,7 +889,7 @@
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="871384520228017" type="EnemySprites">
-                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Enemy.type</param>
+                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Enemy.type &amp; Enemy.nextAttack</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="150078344459600" type="Enemy">
@@ -862,8 +901,9 @@
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="-6" name="Set height" sid="115141391468719" type="EnemyMeeleAttack">
-                            <param id="0" name="Height">15</param>
+                        <action id="-7" name="Set size" sid="115141391468719" type="EnemyMeeleAttack">
+                            <param id="0" name="Width">25</param>
+                            <param id="1" name="Height">25</param>
                         </action>
                         <action id="-10" name="Set value" sid="180137548619561" type="EnemyMeeleAttack">
                             <param id="0" name="Instance variable">damage</param>
@@ -922,12 +962,12 @@
                         <condition id="-8" name="Compare two values" sid="626044970819750" type="System">
                             <param id="0" name="First value">abs(Enemy.X - Player.X)</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">50</param>
+                            <param id="2" name="Second value">80</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="403432793039929" type="EnemySprites">
-                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Enemy.type</param>
+                        <action id="4" name="Set animation" sid="223783352590528" type="EnemySprites">
+                            <param id="0" name="Animation">&quot;Attack&quot; &amp; Enemy.type &amp; Enemy.nextAttack</param>
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="460837278337071" type="Enemy">
@@ -943,6 +983,10 @@
                             <param id="0" name="Instance variable">damage</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="707777393919042" type="EnemyRangedAttack">
+                            <param id="0" name="Instance variable">enemyType</param>
+                            <param id="1" name="Value">Enemy.type</param>
+                        </action>
                         <action id="-10" name="Set value" sid="710686935209819" type="Enemy">
                             <param id="0" name="Instance variable">nextAttack</param>
                             <param id="1" name="Value">floor(random(1,3))</param>
@@ -954,16 +998,16 @@
                         <condition id="-11" name="For Each" sid="837392383648861" type="System">
                             <param id="0" name="Object">Enemy</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="952313720139408" type="Enemy">
+                            <param id="0" name="Instance variable">type</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
                         <event-block sid="768667675929763">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="952313720139408" type="Enemy">
-                                    <param id="0" name="Instance variable">type</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">5</param>
-                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="232371272892965" type="Enemy">
                                     <param id="0" name="Instance variable">nextAttack</param>
                                     <param id="1" name="Comparison">0</param>
@@ -971,22 +1015,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="470098448521287" type="Enemy">
-                                    <param id="0" name="Width">15</param>
-                                    <param id="1" name="Height">10</param>
-                                </action>
                                 <action behavior="LineOfSightAttack" id="0" name="Set range" sid="622260535789486" type="Enemy">
-                                    <param id="0" name="Range">20</param>
+                                    <param id="0" name="Range">40</param>
                                 </action>
                             </actions>
                         </event-block>
                         <event-block sid="826113494895996">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="549904227948720" type="Enemy">
-                                    <param id="0" name="Instance variable">type</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">5</param>
-                                </condition>
                                 <condition id="-7" name="Compare instance variable" sid="700132602365837" type="Enemy">
                                     <param id="0" name="Instance variable">nextAttack</param>
                                     <param id="1" name="Comparison">0</param>
@@ -994,10 +1029,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-7" name="Set size" sid="267470943107729" type="Enemy">
-                                    <param id="0" name="Width">15</param>
-                                    <param id="1" name="Height">10</param>
-                                </action>
                                 <action behavior="LineOfSightAttack" id="0" name="Set range" sid="796070437516182" type="Enemy">
                                     <param id="0" name="Range">120</param>
                                 </action>
@@ -1063,7 +1094,7 @@
                         <condition id="-8" name="Compare two values" sid="869267201734240" type="System">
                             <param id="0" name="First value">abs(Enemy.X - Player.X)</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Second value">20</param>
+                            <param id="2" name="Second value">60</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -1178,6 +1209,7 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="254983439849569" type="Enemy" />
                         <action id="-12" name="Subtract from" sid="817896257124986" type="Enemy">
                             <param id="0" name="Instance variable">life</param>
                             <param id="1" name="Value">1</param>
@@ -1259,6 +1291,23 @@
                         <action id="-9" name="Destroy" sid="386116179801613" type="Enemy" />
                         <action id="-9" name="Destroy" sid="715329147667051" type="EnemySprites" />
                     </actions>
+                    <sub-events>
+                        <event-block sid="567352450412446">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="307337585628598" type="Enemy">
+                                    <param id="0" name="Instance variable">type</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="322402014250661" type="System">
+                                    <param id="0" name="Variable">LevelEnd</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Faz com que os inimigos se afastem caso estejam sobrepostos</comment>
                 <event-block sid="799275658708523">

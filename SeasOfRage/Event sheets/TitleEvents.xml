@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TitleEvents</name>
+    <events>
+        <event-block sid="640345181648746">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="645353741365968" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="139503915445634" type="StartText">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="842264230317448">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="902188664232148" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="751512182742642" type="System">
+                    <param id="0" name="Layout">CharSelect</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
